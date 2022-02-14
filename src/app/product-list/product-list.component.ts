@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 
-import { products } from '../products';
+import { Product, products } from '../products';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css'],
 })
-
 export class ProductListComponent {
   products = products;
 
@@ -16,8 +15,13 @@ export class ProductListComponent {
   }
 
   onNotify($event: any) {
-    window.alert('You will be notified when \'' + $event.product.description + '\' with quantity \'' 
-      + $event.quantity + '\' gets on sale');
+    window.alert(
+      "You will be notified when '" +
+        $event.product.description +
+        "' with quantity '" +
+        $event.quantity +
+        "' gets on sale"
+    );
   }
 }
 
